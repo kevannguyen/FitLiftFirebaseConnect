@@ -3,10 +3,11 @@ var bodyParser = require('body-parser');
 var https = require('https');
 
 var app = express();
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', function(request, response) {
+app.get('/login', function(request, response) {
     response.header("Content-Type",'application/json');
     response.send('{"Error": "POST requests only!"}');
 });
@@ -46,4 +47,4 @@ app.post('/login/', function(request, response) {
     req.end();
 });
 
-app.listen(8080);
+app.listen(process.env.port || 8080);
