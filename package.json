@@ -1,5 +1,5 @@
 {
-  "name": "fitlift_rest_api",
+  "name": "fitlift-firebase-connect",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
