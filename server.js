@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
 });
 
 
-app.post('/', function(request, response) {
+app.post('/login/', function(request, response) {
     response.header("Content-Type",'application/json');
     var e = request.body.email;
     var p = request.body.password;
